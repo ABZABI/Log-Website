@@ -1,0 +1,101 @@
+LOG PAGE DATABASE MODEL
+========================
+
+LOG-IN_CREDENTIALS
+==================
+
+user_id | username | password 
+--------+----------+-----------
+
+CONSTRAINTS
+============
+
+1. USER_ID
+	fk: references user_id in user table
+	unique
+	not null
+type: uuid
+
+2. USERNAME
+	unique
+	not null
+
+3. PASSWORD
+	not null
+check: not less than 6
+
+
+USER_CREDENTIALS
+=================
+user_id | first_name | other_name | last_name | date of birth | gender | email | residence | contact | other_contact | staff_id | department
+--------+------------+------------+-----------+---------------+--------+-------+-----------+---------+---------------+----------+------------
+
+CONSTRAINTS
+============
+
+1. USER_ID
+	pk
+	unique
+	not null
+type: uuid
+
+2. first_name
+	not null
+type: varchar(20)
+
+3. other_name
+	allow null
+type: varchar(20)
+
+4. last_name
+	not null
+type: varchar(20)
+
+5. date_of_birth
+	not null
+type: date
+
+6. gender
+	not null
+type: varchar(7)
+check (gender = male or gender = female)
+
+7. email
+	unique
+	not null
+type: varchar(100)
+
+8. residence
+	not null
+type: varchar(30)
+
+9. contact
+	not null
+	unique
+check: not less or more than 10
+type: text
+
+10. other_contact
+	not null
+	unique
+check: not less or more than 10
+type: text
+
+11. staff_id
+	not null
+	varchar(20)
+	unique
+
+12. department
+	not null
+references: department(department_id)
+
+NORMALIZATION
+==============
+user_id | first_name | other_name | last_name | date of birth | gender | email | residence | contact | other_contact | staff_id | department
+--------+------------+------------+-----------+---------------+--------+-------+-----------+---------+---------------+----------+------------
+
+department_id | department
+--------------+------------
+
+

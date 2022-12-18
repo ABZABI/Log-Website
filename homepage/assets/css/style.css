@@ -1,0 +1,140 @@
+/* BASIC RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+input{
+    border-radius: 0.4rem;
+    width: 15rem;
+    padding: 0.5rem;
+    border: 1px solid #19331a;
+    outline: none;
+    margin-bottom: 0.3rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    -webkit-text-fill-color: #19331a;
+    background: transparent;
+}   
+
+a:hover, button:hover{
+    cursor: pointer;
+}
+
+button{
+    border-radius: 0.4rem;
+    width: 10rem;
+    padding: 0.5rem;
+    margin: 0.7rem;
+    border: none;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: #55833f;
+    transition: 2s;
+}
+
+button:focus{
+    border: 10px #3a5a2b;
+}
+
+button:hover{
+    background-color: #569737;
+}
+
+label{
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* BODY*/
+.body--container{
+    display: flex;
+    min-height: 100vh;
+    color: #19331a;
+    font-family: 'Poppins', sans-serif;
+}
+
+    /* .left-container{
+        display: flex;
+        flex-basis: 50%;
+        background: url(./left-bg.jpg); 
+        background: url(./right-bg.jpg);
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    } */
+
+        /* .left-container h1{
+            color: #19331a;
+            font-size: 4rem;
+            text-shadow: 3px 5px 3px rgba(0,0,0,0.2);
+        } */
+    .right-container{
+        display: flex;
+        /* background-color: rgb(57, 118, 209); */
+        background-color: #d8dfd8;
+        background: url(../images_and_logo/bg/left-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        /* flex-basis: 50%; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    }
+
+        .right-span{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: -0px 0px 3px 3px rgba(0,0,0,0.2);
+            padding: 1rem;
+            border-radius: 1rem;
+            width: auto;
+        }
+     .right-container h2{
+        margin-bottom: 1.5rem;
+     }
+
+     .right-container a.sign-up{
+        text-decoration: none;
+        font-size: 1.1rem;
+     }
+
+     .right-container a.forgot-password {
+        font-size: 0.9rem;
+        color: #19331a;
+        text-decoration: none;
+        transition: 0.5s;
+     }
+
+    a.forgot-password:hover ,a.sign-up:hover{
+        color: rgb(113, 109, 109);
+     }
+
+     a:hover{
+        color: rgb(113, 109, 109);
+     }
+
+        a.sign-up{
+            font-size: 0.4rem;
+            color: #19331a;
+            transition: 0.5s;
+        }
+
+
+
+   
